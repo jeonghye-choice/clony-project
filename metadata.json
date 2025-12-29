@@ -1,0 +1,8 @@
+{
+  "name": "Clony Skin AI",
+  "description": "AI-powered skin analysis and cosmetic recommendation tailored to your unique profile.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ]
+}
