@@ -134,41 +134,42 @@ const App: React.FC = () => {
           <div className="flex flex-col">
             {/* Hero Section */}
             <div
-              className={`grid lg:grid-cols-2 gap-12 items-center min-h-screen px-4 md:px-8 cursor-grab ${isDragging ? 'cursor-grabbing' : ''}`}
+              className={`flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[auto] lg:min-h-screen px-6 md:px-12 py-12 lg:py-0 cursor-grab ${isDragging ? 'cursor-grabbing' : ''}`}
               onMouseDown={handleMouseDown}
             >
-              <div className="space-y-8 order-2 lg:order-1 select-none pointer-events-none pt-36 lg:pt-0">
-                <FadeInUp delay={0.2} className="inline-block bg-white/50 backdrop-blur-sm px-4 py-2 rounded-full text-clony-primary font-bold text-sm tracking-wide shadow-sm pointer-events-auto">
+              <div className="space-y-6 lg:space-y-8 order-1 select-none pointer-events-none pt-4 lg:pt-0 text-center lg:text-left">
+                <FadeInUp delay={0.2} className="inline-block bg-white/50 backdrop-blur-sm px-4 py-2 rounded-full text-clony-primary font-bold text-xs md:text-sm tracking-wide shadow-sm pointer-events-auto">
                   AI SKIN DIAGNOSIS
                 </FadeInUp>
-                <div className="text-4xl md:text-6xl font-display font-bold leading-tight text-gray-900 break-keep">
+                <div className="text-3xl md:text-6xl font-display font-bold leading-tight text-gray-900 break-keep">
                   <StaggerText text="정밀 데이터로 설계하는" delay={0.4} />
-                  <span className="text-gray-900">
+                  <br className="hidden lg:block" />
+                  <span className="text-gray-900 block mt-2 lg:inline lg:mt-0">
                     <StaggerText text="당신만의 뷰티 루틴" delay={0.8} />
                   </span>
                 </div>
-                <div className="space-y-4">
+                <div className="space-y-3 lg:space-y-4 px-2 lg:px-0">
                   <FadeInUp delay={1.2}>
-                    <p className="text-xl md:text-2xl text-gray-800/80 font-medium max-w-xl break-keep leading-relaxed">
+                    <p className="text-base md:text-2xl text-gray-800/80 font-medium max-w-xl break-keep leading-relaxed mx-auto lg:mx-0">
                       0.1mm의 피부 결까지 파악하는 AI 정밀 분석 시스템.
                     </p>
                   </FadeInUp>
                   <FadeInUp delay={1.4}>
-                    <p className="text-xl md:text-2xl text-clony-dark font-bold max-w-xl break-keep leading-relaxed bg-clony-primary/10 inline-block px-2 rounded">
+                    <p className="text-base md:text-2xl text-clony-dark font-bold max-w-xl break-keep leading-relaxed bg-clony-primary/10 inline-block px-2 rounded mx-auto lg:mx-0">
                       오직 당신에게만 완벽한 제품, CLONY AI로 검증하세요.
                     </p>
                   </FadeInUp>
                 </div>
 
-                <div className="flex flex-col gap-10 items-start pt-2 pointer-events-auto">
-                  <FadeInUp delay={1.6} className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                    <PulseButton onClick={() => setIsDownloadModalOpen(true)} className="bg-clony-primary text-white font-bold rounded-xl hover:bg-clony-dark transition-colors text-xl px-12 py-5 shadow-2xl shadow-clony-primary/30">
+                <div className="flex flex-col gap-4 items-center lg:items-start pt-4 pointer-events-auto w-full">
+                  <FadeInUp delay={1.6} className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto px-4 sm:px-0">
+                    <PulseButton onClick={() => setIsDownloadModalOpen(true)} className="w-full sm:w-auto bg-clony-primary text-white font-bold rounded-xl hover:bg-clony-dark transition-colors text-lg md:text-xl px-8 py-4 shadow-2xl shadow-clony-primary/30 flex justify-center">
                       내 피부 확인하기
                     </PulseButton>
                     <Button variant="secondary" onClick={() => {
                       const el = document.getElementById('service-intro');
                       el?.scrollIntoView({ behavior: 'smooth' });
-                    }} className="text-xl px-12 py-5 shadow-xl">
+                    }} className="w-full sm:w-auto text-lg md:text-xl px-8 py-4 shadow-xl flex justify-center">
                       서비스 소개
                     </Button>
                   </FadeInUp>
@@ -176,7 +177,7 @@ const App: React.FC = () => {
               </div>
 
               {/* 3D Phone Mockup */}
-              <Float className="h-[700px] w-full relative order-1 lg:order-2 flex justify-center items-center pt-12" style={{ perspective: '2000px' }}>
+              <Float className="h-[450px] lg:h-[700px] w-full relative order-2 flex justify-center items-center mt-[-20px] lg:mt-0" style={{ perspective: '2000px' }}>
                 <PhoneMockup rotation={rotation}>
                   <div
                     className="w-full h-full bg-[#FAFAFA] flex flex-col font-sans relative"

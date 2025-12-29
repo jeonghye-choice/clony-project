@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface PhoneMockupProps {
     rotation: { x: number; y: number };
@@ -6,8 +6,20 @@ interface PhoneMockupProps {
 }
 
 export const PhoneMockup: React.FC<PhoneMockupProps> = ({ rotation, children }) => {
+    // Adjust scale based on screen width
+    const [scale, setScale] = useState(1);
+    useEffect(() => {
+        const handleResize = () => {
+            // Mobile: scale down significantly, Desktop: full size
+            setScale(window.innerWidth < 768 ? 0.65 : 1);
+        };
+        handleResize(); // Initial call
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     return (
-        <div className="relative group perspective-2000">
+        <div className="relative group perspective-2000" style={{ transform: `scale(${scale})` }}>
             <style>{`
         .phone-3d-wrap { 
             position: relative; 
