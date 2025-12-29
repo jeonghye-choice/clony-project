@@ -14,7 +14,9 @@ export const Navbar: React.FC<NavbarProps> = ({ setView }) => {
         onClick={() => setView(ViewState.HOME)}
         className="cursor-pointer flex items-center gap-2 group min-w-[100px]"
       >
-        <span className="text-2xl font-display font-bold text-clony-primary tracking-tight">Clony</span>
+        <div className="text-xl md:text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text">
+          CLONY <span className="text-xs text-green-500 border border-green-500 px-1 rounded ml-1">UPDATE V3</span>
+        </div>
       </div>
 
       {/* Center Search Bar */}

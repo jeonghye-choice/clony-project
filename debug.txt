@@ -1,0 +1,447 @@
+2025-12-29T13:36:40.109Z vite:config config file loaded in 54.94ms
+2025-12-29T13:36:40.112Z vite:env loading env files: [ '.env', '.env.local', '.env.production', '.env.production.local' ]
+2025-12-29T13:36:40.113Z vite:env env files loaded in 1.37ms
+2025-12-29T13:36:40.114Z vite:env using resolved env: {
+  GEMINI_API_KEY: 'PLACEHOLDER_API_KEY',
+  ALLUSERSPROFILE: 'C:\\ProgramData',
+  ANTIGRAVITY_AGENT: '1',
+  ANTIGRAVITY_CLI_ALIAS: 'agy',
+  APPDATA: 'C:\\Users\\choje\\AppData\\Roaming',
+  CHROME_CRASHPAD_PIPE_NAME: '\\\\.\\pipe\\crashpad_8120_FWXCMUUHURVTBXRV',
+  COLOR: '0',
+  COLORTERM: 'truecolor',
+  CommonProgramFiles: 'C:\\Program Files\\Common Files',
+  'CommonProgramFiles(x86)': 'C:\\Program Files (x86)\\Common Files',
+  CommonProgramW6432: 'C:\\Program Files\\Common Files',
+  COMPUTERNAME: 'JEONGHYE',
+  ComSpec: 'C:\\WINDOWS\\system32\\cmd.exe',
+  configsetroot: 'C:\\WINDOWS\\ConfigSetRoot',
+  DEBUG: 'vite:*',
+  DriverData: 'C:\\Windows\\System32\\Drivers\\DriverData',
+  EDITOR: 'C:\\WINDOWS\\notepad.exe',
+  EFC_13076_1592913036: '1',
+  GIT_ASKPASS: 'c:\\Users\\choje\\AppData\\Local\\Programs\\Antigravity\\resources\\app\\extensions\\git\\dist\\askpass.sh',
+  HOME: 'C:\\Users\\choje',
+  HOMEDRIVE: 'C:',
+  HOMEPATH: '\\Users\\choje',
+  INIT_CWD: 'C:\\Users\\choje\\OneDrive\\바탕 화면\\clony',
+  LANG: 'en_US.UTF-8',
+  LOCALAPPDATA: 'C:\\Users\\choje\\AppData\\Local',
+  LOGONSERVER: '\\\\JEONGHYE',
+  NODE: 'C:\\Program Files\\nodejs\\node.exe',
+  NODE_ENV: 'production',
+  NODE_EXE: 'C:\\Program Files\\nodejs\\\\node.exe',
+  npm_command: 'exec',
+  npm_config_cache: 'C:\\Users\\choje\\AppData\\Local\\npm-cache',
+  npm_config_globalconfig: 'C:\\Users\\choje\\AppData\\Roaming\\npm\\etc\\npmrc',
+  npm_config_global_prefix: 'C:\\Users\\choje\\AppData\\Roaming\\npm',
+  npm_config_init_module: 'C:\\Users\\choje\\.npm-init.js',
+  npm_config_local_prefix: 'C:\\Users\\choje\\OneDrive\\바탕 화면\\clony',
+  npm_config_node_gyp: 'C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\node-gyp\\bin\\node-gyp.js',
+  npm_config_noproxy: '',
+  npm_config_npm_version: '11.6.2',
+  npm_config_prefix: 'C:\\Users\\choje\\AppData\\Roaming\\npm',
+  npm_config_userconfig: 'C:\\Users\\choje\\.npmrc',
+  npm_config_user_agent: 'npm/11.6.2 node/v24.12.0 win32 x64 workspaces/false',
+  npm_execpath: 'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+  npm_lifecycle_event: 'npx',
+  npm_lifecycle_script: 'vite',
+  npm_node_execpath: 'C:\\Program Files\\nodejs\\node.exe',
+  npm_package_json: 'C:\\Users\\choje\\OneDrive\\바탕 화면\\clony\\package.json',
+  npm_package_name: 'clony-skin-ai',
+  npm_package_version: '0.0.0',
+  NPM_PREFIX_JS: 'C:\\Program Files\\nodejs\\\\node_modules\\npm\\bin\\npm-prefix.js',
+  NPM_PREFIX_NPX_CLI_JS: 'C:\\Users\\choje\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npx-cli.js',
+  NPX_CLI_JS: 'C:\\Program Files\\nodejs\\\\node_modules\\npm\\bin\\npx-cli.js',
+  NUMBER_OF_PROCESSORS: '16',
+  OneDrive: 'C:\\Users\\choje\\OneDrive',
+  ORIGINAL_XDG_CURRENT_DESKTOP: 'undefined',
+  OS: 'Windows_NT',
+  PAGER: 'cat',
+  Path: 'C:\\Users\\choje\\OneDrive\\바탕 화면\\clony\\node_modules\\.bin;C:\\Users\\choje\\OneDrive\\바탕 화면\\clony\\node_modules\\.bin;C:\\Users\\choje\\OneDrive\\바탕 화면\\node_modules\\.bin;C:\\Users\\choje\\OneDrive\\node_modules\\.bin;C:\\Users\\choje\\node_modules\\.bin;C:\\Users\\node_modules\\.bin;C:\\node_modules\\.bin;C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\@npmcli\\run-script\\lib\\node-gyp-bin;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files\\nodejs\\;C:\\Program Files\\Git\\cmd;C:\\Users\\choje\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\choje\\AppData\\Local\\Programs\\Antigravity\\bin;C:\\Users\\choje\\AppData\\Roaming\\npm;C:\\Users\\choje\\AppData\\Local\\Programs\\Microsoft VS Code\\bin',
+  PATHEXT: '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL',
+  PROCESSOR_ARCHITECTURE: 'AMD64',
+  PROCESSOR_IDENTIFIER: 'Intel64 Family 6 Model 186 Stepping 2, GenuineIntel',
+  PROCESSOR_LEVEL: '6',
+  PROCESSOR_REVISION: 'ba02',
+  ProgramData: 'C:\\ProgramData',
+  ProgramFiles: 'C:\\Program Files',
+  'ProgramFiles(x86)': 'C:\\Program Files (x86)',
+  ProgramW6432: 'C:\\Program Files',
+  PROMPT: '$P$G',
+  PSModulePath: 'C:\\Users\\choje\\OneDrive\\문서\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules',
+  PUBLIC: 'C:\\Users\\Public',
+  SESSIONNAME: 'Console',
+  SystemDrive: 'C:',
+  SystemRoot: 'C:\\WINDOWS',
+  TEMP: 'C:\\Users\\choje\\AppData\\Local\\Temp',
+  TERM_PROGRAM: 'vscode',
+  TERM_PROGRAM_VERSION: '1.104.0',
+  TMP: 'C:\\Users\\choje\\AppData\\Local\\Temp',
+  USERDOMAIN: 'JEONGHYE',
+  USERDOMAIN_ROAMINGPROFILE: 'JEONGHYE',
+  USERNAME: 'choje',
+  USERPROFILE: 'C:\\Users\\choje',
+  VSCODE_GIT_ASKPASS_EXTRA_ARGS: '',
+  VSCODE_GIT_ASKPASS_MAIN: 'c:\\Users\\choje\\AppData\\Local\\Programs\\Antigravity\\resources\\app\\extensions\\git\\dist\\askpass-main.js',
+  VSCODE_GIT_ASKPASS_NODE: 'C:\\Users\\choje\\AppData\\Local\\Programs\\Antigravity\\Antigravity.exe',
+  VSCODE_GIT_IPC_HANDLE: '\\\\.\\pipe\\vscode-git-9109448491-sock',
+  VSCODE_INJECTION: '1',
+  VSCODE_PYTHON_AUTOACTIVATE_GUARD: '1',
+  windir: 'C:\\WINDOWS',
+  ZES_ENABLE_SYSMAN: '1'
+}
+2025-12-29T13:36:40.125Z vite:env loading env files: [
+  'C:/Users/choje/OneDrive/바탕 화면/clony/.env',
+  'C:/Users/choje/OneDrive/바탕 화면/clony/.env.local',
+  'C:/Users/choje/OneDrive/바탕 화면/clony/.env.production',
+  'C:/Users/choje/OneDrive/바탕 화면/clony/.env.production.local'
+]
+2025-12-29T13:36:40.125Z vite:env env files loaded in 0.47ms
+2025-12-29T13:36:40.126Z vite:env using resolved env: {}
+2025-12-29T13:36:40.145Z vite:config using resolved config: {
+  server: {
+    port: 3000,
+    strictPort: false,
+    host: '0.0.0.0',
+    allowedHosts: [],
+    https: undefined,
+    open: false,
+    proxy: undefined,
+    cors: {
+      origin: /^https?:\/\/(?:(?:[^:]+\.)?localhost|127\.0\.0\.1|\[::1\])(?::\d+)?$/
+    },
+    headers: {},
+    warmup: { clientFiles: [], ssrFiles: [] },
+    middlewareMode: false,
+    fs: {
+      strict: true,
+      deny: [ '.env', '.env.*', '*.{crt,pem}', '**/.git/**' ],
+      allow: [ 'C:/Users/choje/OneDrive/바탕 화면/clony' ]
+    },
+    preTransformRequests: true,
+    perEnvironmentStartEndDuringDev: false,
+    sourcemapIgnoreList: [Function: isInNodeModules$1]
+  },
+  plugins: [
+    'vite:build-metadata',
+    'vite:watch-package-data',
+    'alias',
+    'vite:react-babel',
+    'vite:react-refresh',
+    'vite:modulepreload-polyfill',
+    'vite:resolve',
+    'vite:html-inline-proxy',
+    'vite:css',
+    'vite:esbuild',
+    'vite:json',
+    'vite:wasm-helper',
+    'vite:worker',
+    'vite:asset',
+    'vite:react-virtual-preamble',
+    'vite:wasm-fallback',
+    'vite:define',
+    'vite:css-post',
+    'vite:build-html',
+    'vite:worker-import-meta-url',
+    'vite:asset-import-meta-url',
+    'vite:force-systemjs-wrap-complete',
+    'commonjs',
+    'vite:data-uri',
+    'vite:rollup-options-plugins',
+    'vite:dynamic-import-vars',
+    'vite:import-glob',
+    'vite:build-import-analysis',
+    'vite:esbuild-transpile',
+    'vite:terser',
+    'vite:manifest',
+    'vite:ssr-manifest',
+    'vite:reporter',
+    'vite:load-fallback'
+  ],
+  resolve: {
+    externalConditions: [ 'node' ],
+    extensions: [
+      '.mjs',  '.js',
+      '.mts',  '.ts',
+      '.jsx',  '.tsx',
+      '.json'
+    ],
+    dedupe: [],
+    noExternal: [],
+    external: [],
+    preserveSymlinks: false,
+    alias: [
+      {
+        find: '@',
+        replacement: 'C:\\Users\\choje\\OneDrive\\바탕 화면\\clony'
+      },
+      {
+        find: /^\/?@vite\/env/,
+        replacement: '/@fs/C:/Users/choje/OneDrive/바탕 화면/clony/node_modules/vite/dist/client/env.mjs'
+      },
+      {
+        find: /^\/?@vite\/client/,
+        replacement: '/@fs/C:/Users/choje/OneDrive/바탕 화면/clony/node_modules/vite/dist/client/client.mjs'
+      }
+    ],
+    mainFields: [ 'browser', 'module', 'jsnext:main', 'jsnext' ],
+    conditions: [ 'module', 'browser', 'development|production' ],
+    builtins: []
+  },
+  build: {
+    target: [ 'es2020', 'edge88', 'firefox78', 'chrome87', 'safari14' ],
+    polyfillModulePreload: true,
+    modulePreload: { polyfill: true },
+    outDir: 'dist',
+    assetsDir: 'assets',
+    assetsInlineLimit: 4096,
+    sourcemap: false,
+    terserOptions: {},
+    rollupOptions: { onwarn: [Function: onwarn] },
+    commonjsOptions: { include: [ /node_modules/ ], extensions: [ '.js', '.cjs' ] },
+    dynamicImportVarsOptions: { warnOnError: true, exclude: [ /node_modules/ ] },
+    write: true,
+    emptyOutDir: null,
+    copyPublicDir: true,
+    manifest: false,
+    lib: false,
+    ssrManifest: false,
+    ssrEmitAssets: false,
+    reportCompressedSize: true,
+    chunkSizeWarningLimit: 500,
+    watch: null,
+    cssCodeSplit: true,
+    minify: 'esbuild',
+    ssr: false,
+    emitAssets: true,
+    createEnvironment: [Function: createEnvironment],
+    cssTarget: [ 'es2020', 'edge88', 'firefox78', 'chrome87', 'safari14' ],
+    cssMinify: true
+  },
+  esbuild: { jsxDev: false, jsx: 'automatic', jsxImportSource: undefined },
+  optimizeDeps: {
+    include: [
+      'react',
+      'react-dom',
+      'react/jsx-dev-runtime',
+      'react/jsx-runtime'
+    ],
+    exclude: [],
+    needsInterop: [],
+    extensions: [],
+    disabled: undefined,
+    holdUntilCrawlEnd: true,
+    force: false,
+    noDiscovery: false,
+    esbuildOptions: { preserveSymlinks: false, jsx: 'automatic' }
+  },
+  environments: {
+    client: {
+      define: undefined,
+      resolve: {
+        externalConditions: [ 'node' ],
+        extensions: [
+          '.mjs',  '.js',
+          '.mts',  '.ts',
+          '.jsx',  '.tsx',
+          '.json'
+        ],
+        dedupe: [],
+        noExternal: [],
+        external: [],
+        preserveSymlinks: false,
+        alias: [
+          {
+            find: '@',
+            replacement: 'C:\\Users\\choje\\OneDrive\\바탕 화면\\clony'
+          },
+          {
+            find: /^\/?@vite\/env/,
+            replacement: '/@fs/C:/Users/choje/OneDrive/바탕 화면/clony/node_modules/vite/dist/client/env.mjs'
+          },
+          {
+            find: /^\/?@vite\/client/,
+            replacement: '/@fs/C:/Users/choje/OneDrive/바탕 화면/clony/node_modules/vite/dist/client/client.mjs'
+          }
+        ],
+        mainFields: [ 'browser', 'module', 'jsnext:main', 'jsnext' ],
+        conditions: [ 'module', 'browser', 'development|production' ],
+        builtins: []
+      },
+      keepProcessEnv: false,
+      consumer: 'client',
+      optimizeDeps: {
+        include: [
+          'react',
+          'react-dom',
+          'react/jsx-dev-runtime',
+          'react/jsx-runtime'
+        ],
+        exclude: [],
+        needsInterop: [],
+        extensions: [],
+        disabled: undefined,
+        holdUntilCrawlEnd: true,
+        force: false,
+        noDiscovery: false,
+        esbuildOptions: { preserveSymlinks: false, jsx: 'automatic' }
+      },
+      dev: {
+        warmup: [],
+        sourcemap: { js: true },
+        sourcemapIgnoreList: [Function: isInNodeModules$1],
+        preTransformRequests: true,
+        createEnvironment: [Function: defaultCreateClientDevEnvironment],
+        recoverable: true,
+        moduleRunnerTransform: false
+      },
+      build: {
+        target: [ 'es2020', 'edge88', 'firefox78', 'chrome87', 'safari14' ],
+        polyfillModulePreload: true,
+        modulePreload: { polyfill: true },
+        outDir: 'dist',
+        assetsDir: 'assets',
+        assetsInlineLimit: 4096,
+        sourcemap: false,
+        terserOptions: {},
+        rollupOptions: { onwarn: [Function: onwarn] },
+        commonjsOptions: { include: [ /node_modules/ ], extensions: [ '.js', '.cjs' ] },
+        dynamicImportVarsOptions: { warnOnError: true, exclude: [ /node_modules/ ] },
+        write: true,
+        emptyOutDir: null,
+        copyPublicDir: true,
+        manifest: false,
+        lib: false,
+        ssrManifest: false,
+        ssrEmitAssets: false,
+        reportCompressedSize: true,
+        chunkSizeWarningLimit: 500,
+        watch: null,
+        cssCodeSplit: true,
+        minify: 'esbuild',
+        ssr: false,
+        emitAssets: true,
+        createEnvironment: [Function: createEnvironment],
+        cssTarget: [ 'es2020', 'edge88', 'firefox78', 'chrome87', 'safari14' ],
+        cssMinify: true
+      }
+    }
+  },
+  configFile: 'C:/Users/choje/OneDrive/바탕 화면/clony/vite.config.ts',
+  configFileDependencies: [ 'C:/Users/choje/OneDrive/바탕 화면/clony/vite.config.ts' ],
+  inlineConfig: {
+    root: undefined,
+    base: undefined,
+    mode: undefined,
+    configFile: undefined,
+    configLoader: undefined,
+    logLevel: undefined,
+    clearScreen: undefined,
+    build: {}
+  },
+  root: 'C:/Users/choje/OneDrive/바탕 화면/clony',
+  base: '/',
+  decodedBase: '/',
+  rawBase: '/',
+  publicDir: 'C:/Users/choje/OneDrive/바탕 화면/clony/public',
+  cacheDir: 'C:/Users/choje/OneDrive/바탕 화면/clony/node_modules/.vite',
+  command: 'build',
+  mode: 'production',
+  isWorker: false,
+  mainConfig: null,
+  bundleChain: [],
+  isProduction: true,
+  css: {
+    transformer: 'postcss',
+    preprocessorMaxWorkers: 0,
+    devSourcemap: false
+  },
+  json: { namedExports: true, stringify: 'auto' },
+  builder: undefined,
+  preview: {
+    port: 4173,
+    strictPort: false,
+    host: '0.0.0.0',
+    allowedHosts: [],
+    https: undefined,
+    open: false,
+    proxy: undefined,
+    cors: {
+      origin: /^https?:\/\/(?:(?:[^:]+\.)?localhost|127\.0\.0\.1|\[::1\])(?::\d+)?$/
+    },
+    headers: {}
+  },
+  envDir: 'C:/Users/choje/OneDrive/바탕 화면/clony',
+  env: { BASE_URL: '/', MODE: 'production', DEV: false, PROD: true },
+  assetsInclude: [Function: assetsInclude],
+  logger: {
+    hasWarned: false,
+    info: [Function: info],
+    warn: [Function: warn],
+    warnOnce: [Function: warnOnce],
+    error: [Function: error],
+    clearScreen: [Function: clearScreen],
+    hasErrorLogged: [Function: hasErrorLogged]
+  },
+  packageCache: Map(1) {
+    'fnpd_C:/Users/choje/OneDrive/바탕 화면/clony' => {
+      dir: 'C:/Users/choje/OneDrive/바탕 화면/clony',
+      data: {
+        name: 'clony-skin-ai',
+        private: true,
+        version: '0.0.0',
+        type: 'module',
+        scripts: { dev: 'vite', build: 'vite build', preview: 'vite preview' },
+        dependencies: {
+          'framer-motion': '^12.23.26',
+          react: '^19.2.3',
+          'react-dom': '^19.2.3',
+          recharts: '^3.6.0'
+        },
+        devDependencies: {
+          '@types/node': '^22.14.0',
+          '@vitejs/plugin-react': '^5.0.0',
+          autoprefixer: '^10.4.18',
+          postcss: '^8.4.35',
+          tailwindcss: '^3.4.1',
+          typescript: '~5.8.2',
+          vite: '^6.2.0'
+        }
+      },
+      hasSideEffects: [Function: hasSideEffects],
+      setResolvedCache: [Function: setResolvedCache],
+      getResolvedCache: [Function: getResolvedCache]
+    },
+    set: [Function (anonymous)]
+  },
+  worker: { format: 'iife', plugins: '() => plugins', rollupOptions: {} },
+  appType: 'spa',
+  experimental: { importGlobRestoreExtension: false, hmrPartialAccept: false },
+  future: undefined,
+  ssr: {
+    target: 'node',
+    optimizeDeps: { esbuildOptions: { preserveSymlinks: false } },
+    resolve: { conditions: undefined, externalConditions: undefined }
+  },
+  dev: {
+    warmup: [],
+    sourcemap: { js: true },
+    sourcemapIgnoreList: [Function: isInNodeModules$1],
+    preTransformRequests: false,
+    createEnvironment: [Function: defaultCreateDevEnvironment],
+    recoverable: false,
+    moduleRunnerTransform: false
+  },
+  webSocketToken: 'W7qDYZFT1dJK',
+  getSortedPlugins: [Function: getSortedPlugins],
+  getSortedPluginHooks: [Function: getSortedPluginHooks],
+  createResolver: [Function: createResolver],
+  fsDenyGlob: [Function: arrayMatcher],
+  safeModulePaths: Set(0) {},
+  additionalAllowedHosts: [ '0.0.0.0', '0.0.0.0' ],
+  Symbol(vite:resolved-config): true
+}
+[36mvite v6.4.1 [32mbuilding for production...[36m[39m
+transforming...
+[32m✓[39m 1071 modules transformed.
