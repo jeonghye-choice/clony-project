@@ -141,10 +141,9 @@ const App: React.FC = () => {
                 <FadeInUp delay={0.2} className="inline-block bg-white/50 backdrop-blur-sm px-4 py-2 rounded-full text-clony-primary font-bold text-xs md:text-sm tracking-wide shadow-sm pointer-events-auto">
                   AI SKIN DIAGNOSIS
                 </FadeInUp>
-                <div className="text-3xl md:text-6xl font-display font-bold leading-tight lg:leading-none text-gray-900 break-keep text-center lg:text-left">
+                <div className="text-3xl md:text-6xl font-display font-bold leading-none text-gray-900 break-keep text-center lg:text-left">
                   <StaggerText text="정밀 데이터로 설계하는" delay={0.4} />
-                  <br className="hidden lg:block" />
-                  <span className="text-clony-primary block -mt-4 lg:inline lg:mt-0 text-center lg:text-left">
+                  <span className="text-clony-primary block -mt-6 lg:-mt-4 text-center lg:text-left">
                     <StaggerText text="당신만의 뷰티 루틴" delay={0.8} />
                   </span>
                 </div>
