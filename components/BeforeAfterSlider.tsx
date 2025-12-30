@@ -73,10 +73,8 @@ export const BeforeAfterSlider: React.FC = () => {
                         </ScrollSlideIn>
                         <ScrollSlideIn delay={0.2}>
                             <p className="text-gray-500 text-base md:text-lg leading-relaxed keep-all">
-                                Clony AI가 제안한 루틴으로 관리한 2,840명의 평균 데이터입니다.
-                                <br className="hidden" /> {/* Intentional no-break for this sentence specifically requested */}
-                                수분량은 45% 증가하고, 붉은기는 감소했습니다.
-                                <br />
+                                Clony AI가 제안한 루틴으로 관리한 2,840명의 평균 데이터입니다.<br />
+                                수분량은 45% 증가하고, 붉은기는 감소했습니다.<br />
                                 직접 슬라이더를 움직여 피부 변화를 확인해보세요.
                             </p>
                         </ScrollSlideIn>

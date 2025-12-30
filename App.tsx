@@ -137,25 +137,25 @@ const App: React.FC = () => {
               className={`flex flex-col lg:grid lg:grid-cols-2 gap-16 lg:gap-12 items-center min-h-[auto] lg:min-h-screen px-6 md:px-12 pt-28 pb-12 lg:py-0 cursor-grab ${isDragging ? 'cursor-grabbing' : ''}`}
               onMouseDown={handleMouseDown}
             >
-              <div className="space-y-4 lg:space-y-8 order-1 select-none pointer-events-none text-left">
+              <div className="space-y-4 lg:space-y-8 order-1 select-none pointer-events-none text-center lg:text-left">
                 <FadeInUp delay={0.2} className="inline-block bg-white/50 backdrop-blur-sm px-4 py-2 rounded-full text-clony-primary font-bold text-xs md:text-sm tracking-wide shadow-sm pointer-events-auto">
                   AI SKIN DIAGNOSIS
                 </FadeInUp>
-                <div className="text-3xl md:text-6xl font-display font-bold leading-tight text-gray-900 break-keep text-left">
+                <div className="text-3xl md:text-6xl font-display font-bold leading-tight text-gray-900 break-keep text-center lg:text-left">
                   <StaggerText text="정밀 데이터로 설계하는" delay={0.4} />
                   <br className="hidden lg:block" />
                   <span className="text-gray-900 block mt-2 lg:inline lg:mt-0">
                     <StaggerText text="당신만의 뷰티 루틴" delay={0.8} />
                   </span>
                 </div>
-                <div className="space-y-3 lg:space-y-4 px-2 lg:px-0 text-left">
+                <div className="space-y-3 lg:space-y-4 px-2 lg:px-0 text-center lg:text-left">
                   <FadeInUp delay={1.2}>
-                    <p className="text-base md:text-2xl text-gray-800/80 font-medium max-w-xl break-keep leading-relaxed lg:mx-0">
+                    <p className="text-base md:text-2xl text-gray-800/80 font-medium max-w-xl break-keep leading-relaxed mx-auto lg:mx-0">
                       <span className="whitespace-nowrap">0.1mm의 피부 결까지 파악하는</span><br className="block md:hidden" /> AI 정밀 분석 시스템.
                     </p>
                   </FadeInUp>
                   <FadeInUp delay={1.4}>
-                    <p className="text-base md:text-2xl text-clony-dark font-bold max-w-xl break-keep leading-relaxed bg-clony-primary/10 inline-block px-2 rounded lg:mx-0 text-left">
+                    <p className="text-base md:text-2xl text-clony-dark font-bold max-w-xl break-keep leading-relaxed bg-clony-primary/10 inline-block px-2 rounded mx-auto lg:mx-0 text-center lg:text-left">
                       오직 당신에게만 완벽한 제품,<br className="block md:hidden" /> CLONY AI로 검증하세요.
                     </p>
                   </FadeInUp>
