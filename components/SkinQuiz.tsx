@@ -106,7 +106,8 @@ export const SkinQuiz: React.FC<SkinQuizProps> = ({ onQuizComplete }) => {
                                 <div className="text-6xl mb-6">🧐</div>
                                 <h3 className="text-2xl font-bold text-gray-900 mb-4">피부 MBTI 간단 테스트</h3>
                                 <p className="text-gray-500 mb-8 break-keep">
-                                    복잡한 기기 없이 간단한 질문으로 당신의 피부 성향을 파악해 드려요.
+                                    복잡한 기기 없이 간단한 질문으로<br />
+                                    당신의 피부 성향을 파악해 드려요.
                                 </p>
                                 <button
                                     onClick={handleStart}

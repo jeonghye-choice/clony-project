@@ -137,7 +137,7 @@ const App: React.FC = () => {
               className={`flex flex-col lg:grid lg:grid-cols-2 gap-16 lg:gap-12 items-center min-h-[auto] lg:min-h-screen px-6 md:px-12 pt-28 pb-12 lg:py-0 cursor-grab ${isDragging ? 'cursor-grabbing' : ''}`}
               onMouseDown={handleMouseDown}
             >
-              <div className="space-y-6 lg:space-y-8 order-1 select-none pointer-events-none text-left">
+              <div className="space-y-4 lg:space-y-8 order-1 select-none pointer-events-none text-left">
                 <FadeInUp delay={0.2} className="inline-block bg-white/50 backdrop-blur-sm px-4 py-2 rounded-full text-clony-primary font-bold text-xs md:text-sm tracking-wide shadow-sm pointer-events-auto">
                   AI SKIN DIAGNOSIS
                 </FadeInUp>
@@ -151,7 +151,7 @@ const App: React.FC = () => {
                 <div className="space-y-3 lg:space-y-4 px-2 lg:px-0">
                   <FadeInUp delay={1.2}>
                     <p className="text-base md:text-2xl text-gray-800/80 font-medium max-w-xl break-keep leading-relaxed mx-auto lg:mx-0">
-                      0.1mm의 피부 결까지 파악하는 AI 정밀 분석 시스템.
+                      <span className="whitespace-nowrap">0.1mm의 피부 결까지 파악하는</span><br className="block md:hidden" /> AI 정밀 분석 시스템.
                     </p>
                   </FadeInUp>
                   <FadeInUp delay={1.4}>

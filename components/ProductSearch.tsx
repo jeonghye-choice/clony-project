@@ -84,7 +84,7 @@ export const ProductSearch: React.FC<ProductSearchProps> = ({ isQuizCompleted, o
                             value={query}
                             onChange={handleSearch}
                             placeholder="제품명, 브랜드 또는 고민을 검색해보세요 (예: 리들샷, 수분)"
-                            className="w-full px-8 py-6 rounded-full bg-white border-2 border-clony-primary/10 focus:border-clony-primary focus:ring-4 focus:ring-clony-primary/10 outline-none text-lg md:text-xl shadow-2xl transition-all text-gray-900 placeholder-gray-400"
+                            className="w-full px-6 py-6 pr-12 rounded-full bg-white border-2 border-clony-primary/10 focus:border-clony-primary focus:ring-4 focus:ring-clony-primary/10 outline-none text-base md:text-xl shadow-2xl transition-all text-gray-900 placeholder-gray-400"
                         />
                         <button className="absolute right-3 top-3 bg-clony-primary text-white p-3.5 rounded-full hover:scale-105 active:scale-95 transition-all shadow-lg shadow-clony-primary/30">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-6 h-6">
@@ -148,7 +148,7 @@ export const ProductSearch: React.FC<ProductSearchProps> = ({ isQuizCompleted, o
 
                 <div className="flex justify-center gap-3 flex-wrap pt-4">
                     <span className="text-sm text-gray-400 font-semibold self-center">인기 검색어:</span>
-                    {['리들샷', '수분세럼', '아누아', '진정크림'].map(tag => (
+                    {['리들샷', '수분세럼', '아누아', '진정크림', '모공'].map(tag => (
                         <button
                             key={tag}
                             onClick={() => { setQuery(tag); handleSearch({ target: { value: tag } } as any); }}
