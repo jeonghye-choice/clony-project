@@ -178,7 +178,7 @@ const App: React.FC = () => {
               </div>
 
               {/* 3D Phone Mockup */}
-              <Float className="h-[450px] lg:h-[700px] w-full relative order-2 flex justify-center items-center mt-[-20px] lg:mt-0" style={{ perspective: '2000px' }}>
+              <Float className="h-[450px] lg:h-[700px] w-full relative order-2 flex justify-center items-center mt-[-20px] lg:mt-0 z-0" style={{ perspective: '2000px' }}>
                 <PhoneMockup rotation={rotation}>
                   <div
                     className="w-full h-full bg-[#FAFAFA] flex flex-col font-sans relative"
