@@ -83,7 +83,7 @@ export const SkinMagazine: React.FC = () => {
                         </ScrollSlideIn>
                         <ScrollSlideIn delay={0.1}>
                             <p className="text-gray-500 max-w-lg">
-                                피부 관리 궁금증,<br />
+                                피부 관리 궁금증,<br className="block md:hidden" />
                                 Clony가 쉽고 정확하게 알려드립니다.<br />
                                 매주 업데이트 되는 뷰티 인사이트를 놓치지 마세요.
                             </p>

@@ -141,7 +141,7 @@ const App: React.FC = () => {
                 <FadeInUp delay={0.2} className="inline-block bg-white/50 backdrop-blur-sm px-4 py-2 rounded-full text-clony-primary font-bold text-xs md:text-sm tracking-wide shadow-sm pointer-events-auto">
                   AI SKIN DIAGNOSIS
                 </FadeInUp>
-                <div className="text-3xl md:text-6xl font-display font-bold leading-tight text-gray-900 break-keep text-center lg:text-left">
+                <div className="text-3xl md:text-6xl font-display font-bold leading-tight lg:leading-none text-gray-900 break-keep text-center lg:text-left">
                   <StaggerText text="정밀 데이터로 설계하는" delay={0.4} />
                   <br className="hidden lg:block" />
                   <span className="text-gray-900 block mt-2 lg:inline lg:mt-0 text-center lg:text-left">
@@ -156,7 +156,7 @@ const App: React.FC = () => {
                   </FadeInUp>
                   <FadeInUp delay={1.4}>
                     <p className="text-base md:text-2xl text-clony-dark font-bold max-w-xl break-keep leading-relaxed bg-clony-primary/10 inline-block px-2 rounded mx-auto lg:mx-0 text-center lg:text-left">
-                      오직 당신에게만 완벽한 제품,<br className="block md:hidden" /> CLONY AI로 검증하세요.
+                      오직 당신에게만 완벽한 제품,<br /> CLONY AI로 검증하세요.
                     </p>
                   </FadeInUp>
                 </div>
