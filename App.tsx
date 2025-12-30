@@ -137,7 +137,7 @@ const App: React.FC = () => {
               className={`flex flex-col lg:grid lg:grid-cols-2 gap-16 lg:gap-12 items-center min-h-[auto] lg:min-h-screen px-6 md:px-12 pt-28 pb-12 lg:py-0 cursor-grab ${isDragging ? 'cursor-grabbing' : ''}`}
               onMouseDown={handleMouseDown}
             >
-              <div className="space-y-6 lg:space-y-8 order-1 select-none pointer-events-none text-center lg:text-left">
+              <div className="space-y-6 lg:space-y-8 order-1 select-none pointer-events-none text-left">
                 <FadeInUp delay={0.2} className="inline-block bg-white/50 backdrop-blur-sm px-4 py-2 rounded-full text-clony-primary font-bold text-xs md:text-sm tracking-wide shadow-sm pointer-events-auto">
                   AI SKIN DIAGNOSIS
                 </FadeInUp>
@@ -428,7 +428,7 @@ const App: React.FC = () => {
                         <div className="inline-block bg-clony-primary/20 text-clony-primary px-4 py-1 rounded-full font-bold text-xs uppercase tracking-widest border border-clony-primary/30">Service Info</div>
                       </ScrollSlideIn>
                       <ScrollSlideIn direction="left" delay={0.1}>
-                        <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight break-keep">
+                        <h2 className="text-2xl md:text-5xl font-bold text-white leading-relaxed md:leading-tight break-keep">
                           "카메라만 켜세요" 🔍<br />
                           당신의 피부타입을<br />
                           <span className="text-clony-primary">바로 분석</span>해드립니다.

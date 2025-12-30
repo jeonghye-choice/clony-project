@@ -77,7 +77,7 @@ export const SkinQuiz: React.FC<SkinQuizProps> = ({ onQuizComplete }) => {
                     <span className="text-clony-primary font-bold tracking-widest text-xs uppercase bg-white px-3 py-1 rounded-full shadow-sm">1-Minute Test</span>
                 </ScrollSlideIn>
                 <ScrollSlideIn delay={0.1}>
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-4 mb-2">
+                    <h2 className="text-xl md:text-4xl font-bold text-gray-900 mt-4 mb-2 whitespace-nowrap">
                         내 피부 타입, 확실히 알고 계신가요?
                     </h2>
                     <p className="text-gray-500 mb-12">1분 만에 자가 진단하고 맞춤 솔루션을 확인하세요.</p>

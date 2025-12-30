@@ -61,7 +61,7 @@ export const BeforeAfterSlider: React.FC = () => {
         <section className="py-24 px-4 md:px-8 bg-gray-50 overflow-hidden">
             <div className="max-w-6xl mx-auto">
                 <div className="grid lg:grid-cols-2 gap-16 items-center">
-                    <div className="space-y-6 order-2 lg:order-1">
+                    <div className="space-y-6 order-1">
                         <ScrollSlideIn>
                             <span className="text-clony-primary font-bold tracking-widest text-xs uppercase bg-clony-primary/10 px-3 py-1 rounded-full">Real Results</span>
                         </ScrollSlideIn>
@@ -93,7 +93,7 @@ export const BeforeAfterSlider: React.FC = () => {
                         </ScrollSlideIn>
                     </div>
 
-                    <ScrollSlideIn delay={0.4} className="order-1 lg:order-2 h-full flex items-center justify-center">
+                    <ScrollSlideIn delay={0.4} className="order-2 h-full flex items-center justify-center">
                         {/* Slider Component */}
                         <div
                             ref={containerRef}
@@ -102,7 +102,6 @@ export const BeforeAfterSlider: React.FC = () => {
                             onTouchStart={handleTouchStart}
                         >
                             {/* After Image (Background) */}
-                            {/* Using Gradient Placeholder for "Healthy/Glowing" skin */}
                             <div className="absolute inset-0 bg-gradient-to-br from-[#d4fc79] to-[#96e6a1] flex items-center justify-center">
                                 <div className="absolute bottom-6 right-6 bg-white/20 backdrop-blur-md px-4 py-2 rounded-full text-white font-bold text-sm shadow-sm">
                                     After 2 Weeks
@@ -114,19 +113,15 @@ export const BeforeAfterSlider: React.FC = () => {
                                 className="absolute inset-0 bg-gradient-to-br from-[#ff9a9e] to-[#fecfef] flex items-center justify-center border-r-4 border-white overflow-hidden"
                                 style={{ width: `${sliderPosition}%` }}
                             >
-                                {/* Inner content needs to be fixed width to not squish, but we are just using gradient. 
-                     If using real image: <img className="absolute inset-0 w-full h-full object-cover max-w-none w-[500px]" /> 
-                     Since we use gradient, we just need to ensure text is centered relative to parent? 
-                     Actually for text to stay in place effectively we need a nested div that acts as the view.
-                 */}
-                                <div className="absolute inset-0 w-[500px] flex items-center justify-center">
-                                </div>
-                                <div
-                                    className="absolute bottom-6 left-6 bg-black/20 backdrop-blur-md px-4 py-2 rounded-full text-white font-bold text-sm shadow-sm transition-opacity duration-300"
-                                    style={{ opacity: sliderPosition < 15 ? 0 : 1 }}
-                                >
-                                    Before Care
-                                </div>
+                                <div className="absolute inset-0 w-[500px] flex items-center justify-center"></div>
+                            </div>
+
+                            {/* Static Before Care Label - Fades out naturally as slider moves away */}
+                            <div
+                                className="absolute bottom-6 left-6 bg-black/20 backdrop-blur-md px-4 py-2 rounded-full text-white font-bold text-sm shadow-sm transition-opacity duration-300 pointer-events-none"
+                                style={{ opacity: sliderPosition < 20 ? 0 : 1 }}
+                            >
+                                Before Care
                             </div>
 
                             {/* Slider Handle */}
