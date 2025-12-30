@@ -9,7 +9,7 @@ export const Navbar: React.FC<NavbarProps> = ({ setView }) => {
   const [lang, setLang] = useState<'KR' | 'EN'>('KR');
 
   return (
-    <nav className="fixed top-10 left-0 right-0 z-50 p-6 flex justify-between items-center max-w-7xl mx-auto">
+    <nav className="fixed top-0 left-0 right-0 z-50 p-6 flex justify-between items-center max-w-7xl mx-auto bg-white/80 backdrop-blur-md transition-all duration-300">
       <div
         onClick={() => setView(ViewState.HOME)}
         className="cursor-pointer flex items-center gap-2 group min-w-[100px]"
