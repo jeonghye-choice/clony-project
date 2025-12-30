@@ -9,12 +9,12 @@ export const Navbar: React.FC<NavbarProps> = ({ setView }) => {
   const [lang, setLang] = useState<'KR' | 'EN'>('KR');
 
   return (
-    <nav className="sticky top-0 left-0 right-0 z-50 py-3 px-6 flex justify-between items-center max-w-7xl mx-auto bg-white/80 backdrop-blur-md transition-all duration-300">
+    <nav className="sticky top-0 left-0 right-0 z-50 py-2 px-4 md:py-3 md:px-6 flex justify-between items-center max-w-7xl mx-auto bg-white/80 backdrop-blur-md transition-all duration-300">
       <div
         onClick={() => setView(ViewState.HOME)}
         className="cursor-pointer flex items-center gap-2 group min-w-[100px]"
       >
-        <span className="text-2xl font-display font-bold text-clony-primary tracking-tight">Clony</span>
+        <span className="text-xl md:text-2xl font-display font-bold text-clony-primary tracking-tight">Clony</span>
       </div>
 
       {/* Center Search Bar */}
