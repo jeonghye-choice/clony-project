@@ -29,12 +29,15 @@ export const PhoneMockup: React.FC<PhoneMockupProps> = ({ rotation, children }) 
             height: 670px; 
             transform-style: preserve-3d; 
             transition: transform 0.1s ease-out; 
+            will-change: transform;
         }
         .phone-layer {
             position: absolute;
             inset: 0;
             border-radius: 54px;
             pointer-events: none;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
         }
         /* Titanium/Space Grey finish for the sides */
         .side-metal {
