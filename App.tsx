@@ -168,7 +168,7 @@ const App: React.FC = () => {
                       내 피부 확인하기
                     </PulseButton>
                     <Button variant="secondary" onClick={() => {
-                      const el = document.getElementById('trust-banner');
+                      const el = document.getElementById('expert-team');
                       el?.scrollIntoView({ behavior: 'smooth' });
                     }} className="w-full sm:w-auto text-lg md:text-xl px-8 py-4 shadow-xl flex justify-center">
                       서비스 소개

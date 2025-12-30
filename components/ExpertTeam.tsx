@@ -58,7 +58,7 @@ export const ExpertTeam: React.FC = () => {
     ];
 
     return (
-        <section className="py-24 px-4 md:px-8 bg-gradient-to-b from-white to-gray-50">
+        <section id="expert-team" className="py-24 px-4 md:px-8 bg-gradient-to-b from-white to-gray-50">
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-16 space-y-4">
                     <ScrollSlideIn>
