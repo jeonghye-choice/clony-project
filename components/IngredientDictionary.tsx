@@ -58,7 +58,7 @@ export const IngredientDictionary: React.FC = () => {
     return (
         <section className="py-24 px-4 md:px-8 bg-white border-t border-gray-100">
             <div className="max-w-6xl mx-auto">
-                <div className="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
                     <div className="space-y-4">
                         <ScrollSlideIn>
                             <span className="text-gray-400 font-bold uppercase tracking-widest text-xs">Clony Lab</span>

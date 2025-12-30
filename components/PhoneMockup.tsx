@@ -18,6 +18,8 @@ export const PhoneMockup: React.FC<PhoneMockupProps> = ({ rotation, children }) 
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
+    const effectiveRotation = scale < 1 ? { x: 0, y: 0 } : rotation;
+
     return (
         <div className="relative group perspective-2000" style={{ transform: `scale(${scale})` }}>
             <style>{`
@@ -45,14 +47,14 @@ export const PhoneMockup: React.FC<PhoneMockupProps> = ({ rotation, children }) 
             <div
                 className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 w-[280px] h-[40px] bg-black/40 blur-2xl rounded-[100%] transition-all duration-300"
                 style={{
-                    opacity: 0.4 + Math.abs(rotation.y / 200),
-                    transform: `translateX(${-rotation.y}px) scale(${1 - Math.abs(rotation.y / 300)})`
+                    opacity: 0.4 + Math.abs(effectiveRotation.y / 200),
+                    transform: `translateX(${-effectiveRotation.y}px) scale(${1 - Math.abs(effectiveRotation.y / 300)})`
                 }}
             />
 
             <div
                 className="phone-3d-wrap transition-transform"
-                style={{ transform: `rotateX(${rotation.x}deg) rotateY(${rotation.y}deg)` }}
+                style={{ transform: `rotateX(${effectiveRotation.x}deg) rotateY(${effectiveRotation.y}deg)` }}
             >
                 {/* 1. Back Plate (Matte Space Grey) */}
                 <div
