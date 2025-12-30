@@ -7,9 +7,39 @@ interface NavbarProps {
 
 export const Navbar: React.FC<NavbarProps> = ({ setView }) => {
   const [lang, setLang] = useState<'KR' | 'EN'>('KR');
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // Show immediately if at the very top
+      if (currentScrollY < 10) {
+        setIsVisible(true);
+        setLastScrollY(currentScrollY);
+        return;
+      }
+
+      // Hide if scrolling down, show if scrolling up
+      if (currentScrollY > lastScrollY) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
 
   return (
-    <nav className="sticky top-0 left-0 right-0 z-50 py-2 px-4 md:py-3 md:px-6 flex justify-between items-center max-w-7xl mx-auto bg-white/80 backdrop-blur-md transition-all duration-300">
+    <nav
+      className={`sticky top-0 left-0 right-0 z-50 py-2 px-4 md:py-3 md:px-6 flex justify-between items-center max-w-7xl mx-auto bg-white/80 backdrop-blur-md transition-transform duration-300 ${isVisible ? 'translate-y-0' : '-translate-y-full'
+        }`}
+    >
       <div
         onClick={() => setView(ViewState.HOME)}
         className="cursor-pointer flex items-center gap-2 group min-w-[100px]"
