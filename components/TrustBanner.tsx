@@ -9,7 +9,7 @@ export const TrustBanner: React.FC = () => {
     ];
 
     return (
-        <section className="py-12 bg-white border-b border-gray-100">
+        <section id="trust-banner" className="py-12 bg-white border-b border-gray-100">
             <div className="max-w-7xl mx-auto px-4 md:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-gray-100">
                     {stats.map((stat, i) => (

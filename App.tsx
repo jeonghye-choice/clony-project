@@ -141,21 +141,21 @@ const App: React.FC = () => {
                 <FadeInUp delay={0.2} className="inline-block bg-white/50 backdrop-blur-sm px-4 py-2 rounded-full text-clony-primary font-bold text-xs md:text-sm tracking-wide shadow-sm pointer-events-auto">
                   AI SKIN DIAGNOSIS
                 </FadeInUp>
-                <div className="text-3xl md:text-6xl font-display font-bold leading-tight text-gray-900 break-keep">
+                <div className="text-3xl md:text-6xl font-display font-bold leading-tight text-gray-900 break-keep text-left">
                   <StaggerText text="정밀 데이터로 설계하는" delay={0.4} />
                   <br className="hidden lg:block" />
                   <span className="text-gray-900 block mt-2 lg:inline lg:mt-0">
                     <StaggerText text="당신만의 뷰티 루틴" delay={0.8} />
                   </span>
                 </div>
-                <div className="space-y-3 lg:space-y-4 px-2 lg:px-0">
+                <div className="space-y-3 lg:space-y-4 px-2 lg:px-0 text-left">
                   <FadeInUp delay={1.2}>
-                    <p className="text-base md:text-2xl text-gray-800/80 font-medium max-w-xl break-keep leading-relaxed mx-auto lg:mx-0">
+                    <p className="text-base md:text-2xl text-gray-800/80 font-medium max-w-xl break-keep leading-relaxed lg:mx-0">
                       <span className="whitespace-nowrap">0.1mm의 피부 결까지 파악하는</span><br className="block md:hidden" /> AI 정밀 분석 시스템.
                     </p>
                   </FadeInUp>
                   <FadeInUp delay={1.4}>
-                    <p className="text-base md:text-2xl text-clony-dark font-bold max-w-xl break-keep leading-relaxed bg-clony-primary/10 inline-block px-2 rounded mx-auto lg:mx-0">
+                    <p className="text-base md:text-2xl text-clony-dark font-bold max-w-xl break-keep leading-relaxed bg-clony-primary/10 inline-block px-2 rounded lg:mx-0 text-left">
                       오직 당신에게만 완벽한 제품,<br className="block md:hidden" /> CLONY AI로 검증하세요.
                     </p>
                   </FadeInUp>
@@ -167,7 +167,7 @@ const App: React.FC = () => {
                       내 피부 확인하기
                     </PulseButton>
                     <Button variant="secondary" onClick={() => {
-                      const el = document.getElementById('service-intro');
+                      const el = document.getElementById('trust-banner');
                       el?.scrollIntoView({ behavior: 'smooth' });
                     }} className="w-full sm:w-auto text-lg md:text-xl px-8 py-4 shadow-xl flex justify-center">
                       서비스 소개

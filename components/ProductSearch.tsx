@@ -83,7 +83,7 @@ export const ProductSearch: React.FC<ProductSearchProps> = ({ isQuizCompleted, o
                             type="text"
                             value={query}
                             onChange={handleSearch}
-                            placeholder="제품명, 브랜드 또는 고민을 검색해보세요 (예: 리들샷, 수분)"
+                            placeholder="제품명, 브랜드 또는 고민을 검색해보세요"
                             className="w-full px-6 py-6 pr-12 rounded-full bg-white border-2 border-clony-primary/10 focus:border-clony-primary focus:ring-4 focus:ring-clony-primary/10 outline-none text-base md:text-xl shadow-2xl transition-all text-gray-900 placeholder-gray-400"
                         />
                         <button className="absolute right-3 top-3 bg-clony-primary text-white p-3.5 rounded-full hover:scale-105 active:scale-95 transition-all shadow-lg shadow-clony-primary/30">
