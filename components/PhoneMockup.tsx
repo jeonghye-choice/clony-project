@@ -6,12 +6,17 @@ interface PhoneMockupProps {
 }
 
 export const PhoneMockup: React.FC<PhoneMockupProps> = ({ rotation, children }) => {
-    // Adjust scale based on screen width
+    // Adjust scale and layer count based on screen width
     const [scale, setScale] = useState(1);
+    const [layerCount, setLayerCount] = useState(32);
+
     useEffect(() => {
         const handleResize = () => {
+            const isMobile = window.innerWidth < 768;
             // Mobile: scale down significantly, Desktop: full size
-            setScale(window.innerWidth < 768 ? 0.65 : 1);
+            setScale(isMobile ? 0.65 : 1);
+            // Mobile: drastically reduce layers for performance, Desktop: full detail
+            setLayerCount(isMobile ? 5 : 32);
         };
         handleResize(); // Initial call
         window.addEventListener('resize', handleResize);
@@ -100,12 +105,13 @@ export const PhoneMockup: React.FC<PhoneMockupProps> = ({ rotation, children }) 
                 </div>
 
                 {/* 2. Side Thickness (Metallic Layers) */}
-                {[...Array(32)].map((_, i) => (
+                {[...Array(layerCount)].map((_, i) => (
                     <div
                         key={i}
                         className="phone-layer side-metal"
                         style={{
-                            transform: `translateZ(-${i + 1}px)`,
+                            // Adjust thickness spread based on layer count to maintain overall depth
+                            transform: `translateZ(-${(i + 1) * (32 / layerCount)}px)`,
                             backgroundColor: i % 2 === 0 ? '#1a1a1a' : '#222' // Darker side texture
                         }}
                     />
