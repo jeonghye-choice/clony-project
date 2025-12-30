@@ -144,7 +144,7 @@ const App: React.FC = () => {
                 <div className="text-3xl md:text-6xl font-display font-bold leading-tight lg:leading-none text-gray-900 break-keep text-center lg:text-left">
                   <StaggerText text="정밀 데이터로 설계하는" delay={0.4} />
                   <br className="hidden lg:block" />
-                  <span className="text-clony-primary block -mt-2 lg:inline lg:mt-0 text-center lg:text-left">
+                  <span className="text-clony-primary block -mt-4 lg:inline lg:mt-0 text-center lg:text-left">
                     <StaggerText text="당신만의 뷰티 루틴" delay={0.8} />
                   </span>
                 </div>
