@@ -119,7 +119,7 @@ const App: React.FC = () => {
       {/* Top Banner */}
       <div
         onClick={() => setIsDownloadModalOpen(true)}
-        className="fixed top-0 left-0 right-0 h-10 bg-clony-primary z-[60] flex items-center justify-center text-white text-sm font-medium tracking-wide cursor-pointer hover:bg-clony-dark transition-colors"
+        className="w-full h-10 bg-clony-primary z-[60] flex items-center justify-center text-white text-sm font-medium tracking-wide cursor-pointer hover:bg-clony-dark transition-colors relative"
       >
         <span>Clony 앱 다운로드 하기</span>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4 ml-1">
@@ -134,7 +134,7 @@ const App: React.FC = () => {
           <div className="flex flex-col">
             {/* Hero Section */}
             <div
-              className={`flex flex-col lg:grid lg:grid-cols-2 gap-16 lg:gap-12 items-center min-h-[auto] lg:min-h-screen px-6 md:px-12 pt-28 pb-12 lg:py-0 cursor-grab ${isDragging ? 'cursor-grabbing' : ''}`}
+              className={`flex flex-col lg:grid lg:grid-cols-2 gap-16 lg:gap-12 items-center min-h-[auto] lg:min-h-screen px-6 md:px-12 pt-12 pb-12 lg:py-0 cursor-grab ${isDragging ? 'cursor-grabbing' : ''}`}
               onMouseDown={handleMouseDown}
             >
               <div className="space-y-4 lg:space-y-8 order-1 select-none pointer-events-none text-center lg:text-left">
