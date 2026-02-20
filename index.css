@@ -1,15 +1,32 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Outfit:wght@500;700&family=Fredoka:wght@600;700&family=Comfortaa:wght@600;700&family=Baloo+2:wght@700;800&family=DynaPuff:wght@600;700&display=swap");
+
+@font-face {
+  font-family: 'Cafe24Ssurround';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer utilities {
   .scrollbar-hide::-webkit-scrollbar {
-      display: none;
+    display: none;
   }
+
   .scrollbar-hide {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .bubble-text {
+    -webkit-text-stroke: 12px currentcolor;
+    paint-order: stroke fill;
+    stroke-linejoin: round;
+    stroke-linecap: round;
   }
 }
 

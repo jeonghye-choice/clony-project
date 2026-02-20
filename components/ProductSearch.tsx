@@ -1,28 +1,11 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ScrollSlideIn } from './Motion';
+import { searchProducts } from '../services/productService';
+import type { RealProduct } from '../data/kbeautyProducts';
 
-interface Product {
-    id: number;
-    brand: string;
-    name: string;
-    tags: string[];
-    image: string;
-    matchScore: number;
-    matchGrade: string;
-    analysis: string;
-}
+// ProductSearch now uses real K-beauty data!
 
-const PRODUCTS: Product[] = [
-    { id: 1, brand: 'VT', name: '리들샷 100 에센스', tags: ['모공케어', '피부결', '품절대란'], image: '💉', matchScore: 92, matchGrade: 'Perfect', analysis: '고객님의 모공 고민 해결에 탁월해요. 시카 성분이 진정 효과까지 더해줍니다.' },
-    { id: 2, brand: '토리든', name: '다이브인 저분자 히알루론산 세럼', tags: ['수분충전', '속건조', '물광'], image: '💧', matchScore: 88, matchGrade: 'Great', analysis: '수분 부족형 지성 피부에 딱 맞는 산뜻한 수분감을 제공합니다.' },
-    { id: 3, brand: '아누아', name: '어성초 77 수딩 토너', tags: ['진정케어', '트러블', '순한오일'], image: '🌿', matchScore: 95, matchGrade: 'Perfect', analysis: '민감해진 피부를 빠르게 진정시켜주는 어성초 성분이 77% 함유되어 있어요.' },
-    { id: 4, brand: '닥터지', name: '레드 블레미쉬 클리어 수딩 크림', tags: ['진정', '수분', '여드름성'], image: '💊', matchScore: 85, matchGrade: 'Good', analysis: '여드름성 피부 적합 테스트를 완료하여 안심하고 사용할 수 있는 수분 크림입니다.' },
-    { id: 5, brand: '라운드랩', name: '1025 독도 토너', tags: ['각질제거', '데일리', '순한토너'], image: '⛰️', matchScore: 90, matchGrade: 'Great', analysis: '자극 없이 각질을 정돈해주어 매일 사용하기 좋은 데일리 토너입니다.' },
-    { id: 6, brand: '에스트라', name: '아토베리어365 크림', tags: ['장벽강화', '고보습', '캡슐크림'], image: '🛡️', matchScore: 82, matchGrade: 'Good', analysis: '피부 장벽이 약해졌을 때 튼튼하게 채워주는 고보습 캡슐 크림이에요.' },
-    { id: 7, brand: '바이오던스', name: '바이오 콜라겐 리얼 딥 마스크', tags: ['모공', '탄력', '콜라겐'], image: '🎭', matchScore: 89, matchGrade: 'Great', analysis: '늘어진 모공을 쫀쫀하게 잡아주는 콜라겐 팩입니다.' },
-    { id: 8, brand: '성분에디터', name: '그린토마토 포어 리프팅 앰플', tags: ['모공축소', '피지조절', '탄력'], image: '🍅', matchScore: 91, matchGrade: 'Excellent', analysis: '가로 세로 늘어진 모공을 동시에 케어해주는 리프팅 앰플입니다.' },
-];
 
 export interface ProductSearchProps {
     isQuizCompleted: boolean;
@@ -31,8 +14,8 @@ export interface ProductSearchProps {
 
 export const ProductSearch: React.FC<ProductSearchProps> = ({ isQuizCompleted, onScrollToQuiz }) => {
     const [query, setQuery] = useState('');
-    const [results, setResults] = useState<Product[]>([]);
-    const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+    const [results, setResults] = useState<RealProduct[]>([]);
+    const [selectedProduct, setSelectedProduct] = useState<RealProduct | null>(null);
     const [isAnalyzing, setIsAnalyzing] = useState(false);
 
     const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -44,15 +27,12 @@ export const ProductSearch: React.FC<ProductSearchProps> = ({ isQuizCompleted, o
             return;
         }
 
-        const filtered = PRODUCTS.filter(p =>
-            p.name.includes(value) ||
-            p.brand.includes(value) ||
-            p.tags.some(t => t.includes(value))
-        );
+        // Use real product search service
+        const filtered = searchProducts(value);
         setResults(filtered);
     };
 
-    const handleSelectProduct = (product: Product) => {
+    const handleSelectProduct = (product: RealProduct) => {
         if (!isQuizCompleted) {
             alert('1분 검사를 먼저 실시해주세요! 📝');
             onScrollToQuiz();
@@ -83,7 +63,7 @@ export const ProductSearch: React.FC<ProductSearchProps> = ({ isQuizCompleted, o
                             type="text"
                             value={query}
                             onChange={handleSearch}
-                            placeholder="제품명, 브랜드 또는 고민을 검색해보세요"
+                            placeholder="제품명, 브랜드 또는 고민을 검색해보세요 (ex. 블랙헤드, 선크림, 비타민)"
                             className="w-full px-6 py-6 pr-12 rounded-full bg-white border-2 border-clony-primary/10 focus:border-clony-primary focus:ring-4 focus:ring-clony-primary/10 outline-none text-base md:text-xl shadow-2xl transition-all text-gray-900 placeholder-gray-400"
                         />
                         <button className="absolute right-3 top-3 bg-clony-primary text-white p-3.5 rounded-full hover:scale-105 active:scale-95 transition-all shadow-lg shadow-clony-primary/30">

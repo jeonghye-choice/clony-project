@@ -19,7 +19,7 @@ export default {
             },
             fontFamily: {
                 sans: ['Pretendard', 'Inter', 'sans-serif'],
-                display: ['Pretendard', 'Outfit', 'sans-serif'],
+                display: ['Baloo 2', 'DynaPuff', 'Comfortaa', 'sans-serif'],
             },
             animation: {
                 'fade-in-up': 'fadeInUp 0.5s ease-out',

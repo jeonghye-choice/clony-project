@@ -14,5 +14,8 @@ export default defineConfig(({ mode }) => {
     build: {
       minify: false, // Keep it false for now to debug
     },
+    server: {
+      host: true,
+    },
   };
 });

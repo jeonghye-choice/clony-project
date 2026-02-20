@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ScrollSlideIn } from './Motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 interface Ingredient {
     name: string;
@@ -51,10 +52,56 @@ const ingredients: Ingredient[] = [
         desc: "피부 표면의 묵은 각질을 녹여 매끄러운 피부결을 만들어줍니다. BHA는 모공 속 피지까지 녹여요.",
         tag: "각질제거",
         color: "bg-red-50 text-red-600"
+    },
+    // New Advanced Ingredients
+    {
+        name: "PDRN (연어 DNA)",
+        enName: "Polydeoxyribonucleotide",
+        desc: "연어 생식세포에서 추출한 DNA 조각으로, 손상된 피부 조직을 재생시키고 속건조를 개선합니다.",
+        tag: "재생/탄력",
+        color: "bg-pink-50 text-pink-600"
+    },
+    {
+        name: "바쿠치올",
+        enName: "Bakuchiol",
+        desc: "보골지 씨앗에서 추출한 '식물성 레티놀'. 레티놀과 효과는 비슷하지만 자극이 없고 낮에도 사용 가능합니다.",
+        tag: "저자극 안티에이징",
+        color: "bg-amber-50 text-amber-700"
+    },
+    {
+        name: "이데베논",
+        enName: "Idebenone",
+        desc: "비타민C의 4배, 코엔자임Q10의 10배에 달하는 강력한 항산화 효과로 '바르는 보톡스'라 불립니다.",
+        tag: "강력 항산화",
+        color: "bg-orange-50 text-orange-600"
+    },
+    {
+        name: "EGF",
+        enName: "Epidermal Growth Factor",
+        desc: "체내에 존재하는 단백질 성분으로 상피세포의 성장을 촉진해 흉터 회복과 노화 방지에 탁월합니다.",
+        tag: "세포 재생",
+        color: "bg-cyan-50 text-cyan-600"
+    },
+    {
+        name: "글루타치온",
+        enName: "Glutathione",
+        desc: "멜라닌 색소 생성을 억제하여 피부를 백옥처럼 하얗고 투명하게 만들어주는 '백옥 주사' 성분입니다.",
+        tag: "광채 미백",
+        color: "bg-slate-50 text-slate-600"
+    },
+    {
+        name: "세라마이드 NP",
+        enName: "Ceramide NP",
+        desc: "피부 지질의 50%를 차지하는 성분으로, 벽돌처럼 촘촘하게 피부 장벽을 쌓아 수분 증발을 막습니다.",
+        tag: "장벽 강화",
+        color: "bg-stone-50 text-stone-600"
     }
 ];
 
 export const IngredientDictionary: React.FC = () => {
+    const [showAll, setShowAll] = useState(false);
+    const visibleIngredients = showAll ? ingredients : ingredients.slice(0, 6);
+
     return (
         <section className="py-24 px-4 md:px-8 bg-white border-t border-gray-100">
             <div className="max-w-6xl mx-auto">
@@ -77,32 +124,51 @@ export const IngredientDictionary: React.FC = () => {
                 </div>
 
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-                    {ingredients.map((item, idx) => (
-                        <ScrollSlideIn key={idx} delay={idx * 0.1}>
-                            <div className="relative group h-[200px] rounded-3xl border border-gray-100 p-6 flex flex-col justify-between overflow-hidden bg-white transition-all duration-300 hover:shadow-xl hover:border-transparent">
+                    <AnimatePresence>
+                        {visibleIngredients.map((item, idx) => (
+                            <motion.div
+                                key={item.name}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: 20 }}
+                                transition={{ delay: idx * 0.05 }}
+                            >
+                                <div className="relative group h-[220px] rounded-3xl border border-gray-100 p-6 flex flex-col justify-between overflow-hidden bg-white transition-all duration-300 hover:shadow-xl hover:border-transparent">
 
-                                {/* Default State */}
-                                <div className="group-hover:opacity-0 transition-opacity duration-300 absolute inset-0 p-6 flex flex-col justify-between">
-                                    <div className={`self-start px-3 py-1 rounded-full text-[10px] font-bold ${item.color}`}>
-                                        {item.tag}
+                                    {/* Default State */}
+                                    <div className="group-hover:opacity-0 transition-opacity duration-300 absolute inset-0 p-6 flex flex-col justify-between">
+                                        <div className={`self-start px-3 py-1 rounded-full text-[10px] font-bold ${item.color}`}>
+                                            {item.tag}
+                                        </div>
+                                        <div>
+                                            <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-1 whitespace-nowrap md:whitespace-normal break-keep">{item.name}</h3>
+                                            <p className="text-xs md:text-sm text-gray-400 font-medium">{item.enName}</p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-1 whitespace-nowrap md:whitespace-normal">{item.name}</h3>
-                                        <p className="text-sm text-gray-400 font-medium">{item.enName}</p>
+
+                                    {/* Hover State */}
+                                    <div className="absolute inset-0 bg-clony-dark p-6 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
+                                        <h4 className="font-bold text-lg mb-2">{item.name}</h4>
+                                        <p className="text-xs md:text-sm leading-relaxed opacity-80 break-keep">
+                                            {item.desc}
+                                        </p>
                                     </div>
                                 </div>
+                            </motion.div>
+                        ))}
+                    </AnimatePresence>
+                </div>
 
-                                {/* Hover State */}
-                                <div className="absolute inset-0 bg-clony-dark p-6 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
-                                    <h4 className="font-bold text-lg mb-2">{item.name}</h4>
-                                    <p className="text-sm leading-relaxed opacity-80 break-keep">
-                                        {item.desc}
-                                    </p>
-                                </div>
-
-                            </div>
-                        </ScrollSlideIn>
-                    ))}
+                <div className="mt-12 flex justify-center">
+                    <button
+                        onClick={() => setShowAll(!showAll)}
+                        className="bg-white border border-gray-200 text-gray-600 font-bold py-3 px-8 rounded-full hover:bg-gray-50 hover:border-gray-300 transition-all flex items-center gap-2 shadow-sm"
+                    >
+                        <span>{showAll ? '간단히 보기' : '더 많은 고급 성분 보기'}</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className={`w-4 h-4 transition-transform duration-300 ${showAll ? 'rotate-180' : ''}`}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                        </svg>
+                    </button>
                 </div>
             </div>
         </section>

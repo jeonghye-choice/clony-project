@@ -7,15 +7,20 @@ interface ArticleProps {
     excerpt: string;
     date: string;
     readTime: string;
-    imageColor: string;
+    imageUrl: string;
     delay: number;
 }
 
-const ArticleCard: React.FC<ArticleProps> = ({ category, title, excerpt, date, readTime, imageColor, delay }) => (
+const ArticleCard: React.FC<ArticleProps> = ({ category, title, excerpt, date, readTime, imageUrl, delay }) => (
     <ScrollSlideIn delay={delay}>
         <div className="group cursor-pointer">
-            <div className={`aspect-[4/3] rounded-2xl mb-5 overflow-hidden relative ${imageColor} shadow-md`}>
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>
+            <div className="aspect-[4/3] rounded-2xl mb-5 overflow-hidden relative shadow-md">
+                <img
+                    src={imageUrl}
+                    alt={title}
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-500"></div>
                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider text-gray-800">
                     {category}
                 </div>
@@ -48,7 +53,7 @@ export const SkinMagazine: React.FC = () => {
             excerpt: "아무리 발라도 건조한 피부, 원인은 피부 장벽에 있습니다. 피부과 전문의가 알려주는 겨울철 보습 꿀팁 3가지를 확인해보세요.",
             date: "Dec 28, 2024",
             readTime: "5 min",
-            imageColor: "bg-blue-100",
+            imageUrl: "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&q=80&w=800", // Winter/Cream texture
             delay: 0.1
         },
         {
@@ -57,7 +62,7 @@ export const SkinMagazine: React.FC = () => {
             excerpt: "안티에이징의 대명사 레티놀과 미백의 왕 비타민C. 내 피부 타입과 고민에 따라 어떤 성분을 선택해야 할까요?",
             date: "Dec 25, 2024",
             readTime: "7 min",
-            imageColor: "bg-yellow-100",
+            imageUrl: "https://images.unsplash.com/photo-1629198688000-71f23e745b6e?auto=format&fit=crop&q=80&w=800", // Serum bottles
             delay: 0.2
         },
         {
@@ -66,7 +71,7 @@ export const SkinMagazine: React.FC = () => {
             excerpt: "AI 기술이 뷰티 산업을 어떻게 바꾸고 있을까요? 초개인화된 뷰티 솔루션의 미래를 미리 만나봅니다.",
             date: "Dec 20, 2024",
             readTime: "4 min",
-            imageColor: "bg-purple-100",
+            imageUrl: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&q=80&w=800", // Lab/Science/Tech
             delay: 0.3
         }
     ];

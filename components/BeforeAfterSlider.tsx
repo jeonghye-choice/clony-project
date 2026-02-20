@@ -103,7 +103,12 @@ export const BeforeAfterSlider: React.FC = () => {
                             onTouchStart={handleTouchStart}
                         >
                             {/* After Image (Background) */}
-                            <div className="absolute inset-0 bg-gradient-to-br from-[#d4fc79] to-[#96e6a1] flex items-center justify-center">
+                            <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
+                                <img
+                                    src="/assets/images/skin_after.png"
+                                    alt="After Skin Care"
+                                    className="w-full h-full object-cover"
+                                />
                                 <div className="absolute bottom-6 right-6 bg-white/20 backdrop-blur-md px-4 py-2 rounded-full text-white font-bold text-sm shadow-sm">
                                     After 2 Weeks
                                 </div>
@@ -111,10 +116,24 @@ export const BeforeAfterSlider: React.FC = () => {
 
                             {/* Before Image (Foreground - Clipped) */}
                             <div
-                                className="absolute inset-0 bg-gradient-to-br from-[#ff9a9e] to-[#fecfef] flex items-center justify-center border-r-4 border-white overflow-hidden"
+                                className="absolute inset-0 bg-gray-200 flex items-center justify-center border-r-4 border-white overflow-hidden"
                                 style={{ width: `${sliderPosition}%` }}
                             >
-                                <div className="absolute inset-0 w-[500px] flex items-center justify-center"></div>
+                                <div className="absolute inset-0 w-[500px] flex items-center justify-center bg-gray-200">
+                                    {/* Note: Using skin_after with filters to simulate 'Before' state due to generation limit.
+                                         In production, this should be /assets/images/skin_before.png */}
+                                    <img
+                                        src="/assets/images/skin_after.png"
+                                        alt="Before Skin Care"
+                                        className="w-full h-full object-cover"
+                                        style={{
+                                            maxWidth: 'none',
+                                            width: '500px', // Fixed width to prevent squishing matches container max-w
+                                            // Aggressive filter to simulate redness, dullness, and skin trouble
+                                            filter: 'brightness(0.85) contrast(1.4) saturate(1.4) sepia(0.2) hue-rotate(-15deg)'
+                                        }}
+                                    />
+                                </div>
                             </div>
 
                             {/* Static Before Care Label - Fades out naturally as slider moves away */}

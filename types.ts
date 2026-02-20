@@ -23,5 +23,8 @@ export interface SkinAnalysisResult {
 export enum ViewState {
   HOME = 'HOME',
   ANALYZE = 'ANALYZE',
-  RESULTS = 'RESULTS'
+  RESULTS = 'RESULTS',
+  CHECKOUT = 'CHECKOUT',
+  SUCCESS = 'SUCCESS',
+  ADMIN = 'ADMIN'
 }

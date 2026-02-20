@@ -14,7 +14,7 @@ export const TrustBanner: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-gray-100">
                     {stats.map((stat, i) => (
                         <ScrollSlideIn key={i} delay={i * 0.1} className="py-4 md:py-0">
-                            <p className="text-4xl md:text-5xl font-bold text-clony-primary font-display mb-2">{stat.value}</p>
+                            <p className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-blue-600 font-display mb-2">{stat.value}</p>
                             <p className="text-gray-500 font-medium text-sm md:text-base">{stat.label}</p>
                         </ScrollSlideIn>
                     ))}

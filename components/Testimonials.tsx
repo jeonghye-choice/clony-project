@@ -6,21 +6,18 @@ export const Testimonials: React.FC = () => {
         {
             user: "김민지",
             age: "24세",
-            score: "70점 → 92점",
             content: "수분 부족형 지성이라 제품 고르기가 힘들었는데, 추천해주신 토너 쓰고 속건조가 완전히 해결됐어요!",
             hashtag: "#수부지 #인생템"
         },
         {
             user: "이준호",
             age: "29세",
-            score: "55점 → 88점",
             content: "피부과 갈 시간은 없고 홈케어는 막막했는데, 매일 아침 피부 상태 체크하면서 관리하니 정말 좋아지네요.",
             hashtag: "#남성스킨케어 #홈케어"
         },
         {
             user: "박서연",
             age: "31세",
-            score: "65점 → 95점",
             content: "기미랑 잡티가 고민이었는데 AI가 분석해준 미백 세럼 꾸준히 바르고 얼굴 환해졌다는 소리 많이 들어요.",
             hashtag: "#미백관리 #30대기초"
         }
@@ -33,8 +30,8 @@ export const Testimonials: React.FC = () => {
                     <div className="text-center mb-16">
                         <span className="text-clony-primary font-bold tracking-widest text-sm uppercase bg-clony-primary/10 px-3 py-1 rounded-full">Real Review</span>
                         <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mt-4 leading-tight">
-                            이미 <span className="text-clony-primary">10만 명</span>이<br />
-                            효과를 경험했습니다.
+                            실제 사용자들이 경험한<br />
+                            <span className="text-clony-primary">피부의 놀라운 변화</span>
                         </h2>
                     </div>
                 </ScrollSlideIn>
@@ -47,9 +44,6 @@ export const Testimonials: React.FC = () => {
                                     <div className="flex justify-between items-start mb-4">
                                         <div className="flex gap-1">
                                             {[...Array(5)].map((_, i) => <span key={i} className="text-yellow-400">★</span>)}
-                                        </div>
-                                        <div className="bg-white px-3 py-1 rounded-full text-xs font-bold text-clony-primary shadow-sm border border-gray-100">
-                                            {review.score}
                                         </div>
                                     </div>
                                     <p className="text-gray-700 text-lg font-medium leading-relaxed mb-6 break-keep">

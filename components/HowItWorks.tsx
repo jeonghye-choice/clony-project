@@ -4,19 +4,19 @@ import { ScrollSlideIn } from './Motion';
 export const HowItWorks: React.FC = () => {
     const steps = [
         {
+            icon: "📝",
+            title: "1. 피부 타입 진단",
+            desc: "간단한 퀴즈로\n내 피부 타입을 확인합니다."
+        },
+        {
             icon: "📸",
-            title: "1. 사진 촬영",
-            desc: "카메라로 얼굴을 촬영하여\n정밀 데이터를 수집합니다."
+            title: "2. 성분표 스캔",
+            desc: "매장에서 제품을 찍으면\nAI가 성분을 분석하고\n내 피부와의 매칭도를 알려줍니다."
         },
         {
-            icon: "🧠",
-            title: "2. AI 정밀 분석",
-            desc: "모공, 주름, 탄력 등\n6가지 항목을 분석합니다."
-        },
-        {
-            icon: "✨",
-            title: "3. 맞춤 솔루션",
-            desc: "현재 피부 상태에 딱 맞는\n제품과 루틴을 추천합니다."
+            icon: "🚚",
+            title: "3. 즉시 구매 & 배송",
+            desc: "앱에서 바로 주문하면\n당일 또는 새벽에 배송됩니다."
         }
     ];
 
@@ -25,7 +25,7 @@ export const HowItWorks: React.FC = () => {
             <div className="max-w-7xl mx-auto px-4 md:px-8">
                 <ScrollSlideIn>
                     <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">
-                        <span className="text-clony-primary">3초</span>만에 끝나는 피부 진단
+                        성분표 찍고 <span className="text-clony-primary">5초</span> 만에 확인
                     </h2>
                 </ScrollSlideIn>
 
